@@ -11,7 +11,7 @@ variable "name_prefix" {
 }
 
 variable "target_key_id" {
-  description = "T(Required) Identifier for the key for which the alias is for, can be either an ARN or key_id."
+  description = "(Required) Identifier for the key for which the alias is for, can be either an ARN or key_id."
   type        = string
 }
 
