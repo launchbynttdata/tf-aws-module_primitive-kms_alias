@@ -39,6 +39,6 @@ module "kms_key" {
 module "kms_alias" {
   source = "../.."
 
-  name          = module.resource_names["key_alias"].minimal_random_suffix_without_any_separators
+  name_prefix   = module.resource_names["key_alias"].minimal_random_suffix_without_any_separators
   target_key_id = module.kms_key.key_id
 }
