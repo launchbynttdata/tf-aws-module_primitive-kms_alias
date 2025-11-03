@@ -83,7 +83,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | The name of the resource. | `string` | `null` | no |
 | <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Creates a unique name beginning with the specified prefix. Conflicts with 'name'. | `string` | `null` | no |
-| <a name="input_target_key_id"></a> [target\_key\_id](#input\_target\_key\_id) | T(Required) Identifier for the key for which the alias is for, can be either an ARN or key\_id. | `string` | n/a | yes |
+| <a name="input_target_key_id"></a> [target\_key\_id](#input\_target\_key\_id) | (Required) Identifier for the key for which the alias is for, can be either an ARN or key\_id. | `string` | n/a | yes |
 
 ## Outputs
 

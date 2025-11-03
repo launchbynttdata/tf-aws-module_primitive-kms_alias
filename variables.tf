@@ -18,7 +18,7 @@ variable "target_key_id" {
 
 check "name_or_prefix" {
   assert {
-    condition     = !(var.name != null && var.name_prefix != null)
+    condition     = !(var.name != null && var.name_prefix != null) && !(var.name == null && var.name_prefix == null)
     error_message = "Only one of 'name' or 'name_prefix' can be specified."
   }
 }
