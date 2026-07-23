@@ -61,12 +61,6 @@ The repository keeps example state files only for reference—avoid committing c
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.5 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.100 |
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.100.0 |
-
 ## Modules
 
 No modules.
@@ -90,6 +84,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_kms_alias_arn"></a> [kms\_alias\_arn](#output\_kms\_alias\_arn) | The ARN of the KMS Alias. |
-| <a name="output_target_key_arn"></a> [target\_key\_arn](#output\_target\_key\_arn) | The ARN of the target KMS Key. |
 | <a name="output_name"></a> [name](#output\_name) | The name of the KMS Alias. |
+| <a name="output_target_key_arn"></a> [target\_key\_arn](#output\_target\_key\_arn) | The ARN of the target KMS Key. |
 <!-- END_TF_DOCS -->
