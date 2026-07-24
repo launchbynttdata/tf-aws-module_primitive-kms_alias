@@ -15,7 +15,21 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+// TestComposableComplete is the functional test entrypoint. It deploys the
+// example, verifies the KMS alias and its target key, and tears the example
+// down.
 func TestComposableComplete(t *testing.T, ctx testTypes.TestContext) {
+	verifyKMSAlias(t, ctx)
+}
+
+// TestComposableCompleteReadOnly is the readonly test entrypoint. It assumes
+// the example is already deployed and performs the same read-only
+// verification without triggering apply/destroy.
+func TestComposableCompleteReadOnly(t *testing.T, ctx testTypes.TestContext) {
+	verifyKMSAlias(t, ctx)
+}
+
+func verifyKMSAlias(t *testing.T, ctx testTypes.TestContext) {
 	// Retrieve Terraform outputs
 	kmsAliasArn := terraform.Output(t, ctx.TerratestTerraformOptions(), "kms_alias_arn")
 	targetKeyArn := terraform.Output(t, ctx.TerratestTerraformOptions(), "target_key_arn")
