@@ -31,8 +31,8 @@ func TestComposableCompleteReadOnly(t *testing.T, ctx testTypes.TestContext) {
 
 func verifyKMSAlias(t *testing.T, ctx testTypes.TestContext) {
 	// Retrieve Terraform outputs
-	kmsAliasArn := terraform.Output(t, ctx.TerratestTerraformOptions(), "kms_alias_arn")
-	targetKeyArn := terraform.Output(t, ctx.TerratestTerraformOptions(), "target_key_arn")
+	kmsAliasArn := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "kms_alias_arn")
+	targetKeyArn := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "target_key_arn")
 
 	t.Run("OutputsPresent", func(t *testing.T) {
 		assert.NotEmpty(t, kmsAliasArn, "kms_alias_arn output should not be empty")
